@@ -1,7 +1,7 @@
 ---
 
 - name: ping
-  hosts: wordpress
+  hosts: wiki
   become: yes
   tasks:
     - name: ping_machine_cible
