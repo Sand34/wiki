@@ -3,4 +3,4 @@
   hosts: wwiki
   become: yes
   roles:
-    - name: Install required tools
+    - name: tools
