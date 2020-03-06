@@ -9,7 +9,7 @@
     - name: Create mariadb mysql.sock
       template:
         src: roles/mariadb/templates/mysql.sock.j2
-        dest: /appli/projects/wikib/mariadb/mysql/mysql.sock
+        dest: /var/lib/mysql/mysql.sock
         #notify: restart mariadb
 
 
