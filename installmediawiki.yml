@@ -3,5 +3,12 @@
   hosts: wiki
   become: yes
   roles:
+
+    - name: arborescence
+    - name: unzip
+    - name: depot_package1
+    - name: selinux
+    - name: nginx
+    - name: php
     - name: mariadb
-    
+    - name: config_mariadb
