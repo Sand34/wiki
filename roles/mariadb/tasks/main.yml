@@ -1,1 +1,7 @@
----
+    - name: install Mariadb
+      package:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - mariadb-server
+        - python-mysqldb

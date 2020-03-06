@@ -3,4 +3,5 @@
   hosts: wiki
   become: yes
   roles:
-    - name: tools
+    - name: mariadb
+    
