@@ -3,4 +3,9 @@
         name:
           - mariadb-server
         state: present
-      
+
+    - name: install Mariadb
+      yum:
+        name:
+          - mariadb-server
+        state: absent
