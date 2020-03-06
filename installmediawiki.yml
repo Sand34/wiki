@@ -1,5 +1,5 @@
 ---
-- name: install
+- name: installmediawiki
   hosts: wwiki
   become: yes
   roles:
