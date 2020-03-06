@@ -6,6 +6,13 @@
         - mariadb-server
         - MySQL-python
 
+    - name: Create mariadb mysql.sock
+      template:
+        src: roles/mariadb/templates/mysql.sock.j2
+        dest: /appli/projects/wikib/mariadb/mysql/mysql.sock
+        notify: restart mariadb
+
+
     - name: Create mariadb my.cnf
       template:
         src: roles/mariadb/templates/maria_my.cnf.j2
