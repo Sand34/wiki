@@ -10,8 +10,6 @@
       template:
         src: roles/mariadb/templates/mysql.sock.j2
         dest: /var/lib/mysql/mysql.sock
-        #notify: restart mariadb
-
 
     - name: Create mariadb my.cnf
       template:
