@@ -1,7 +1,6 @@
     - name: install Mariadb
-      package:
-        name: "{{ item }}"
+      yum:
+        name:
+          - mariadb-server
         state: present
-      loop:
-        - mariadb-server
-        - python-mysqldb
+      
