@@ -1,0 +1,6 @@
+# TOOLS
+    - name: Install required tools
+      apt:
+        name:
+          - unzip
+        state: present

@@ -1,0 +1,7 @@
+---
+- name: ping
+  hosts: wwiki
+  become: yes
+  tasks:
+
+    - name: Install required tools
