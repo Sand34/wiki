@@ -3,7 +3,6 @@
         name: mariadb
         state: stoped
 
-
     - name: Synchronization origin database config and FS config
       synchronize:
         src: /var/lib/mysql
