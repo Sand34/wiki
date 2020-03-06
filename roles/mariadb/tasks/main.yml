@@ -47,7 +47,7 @@
         - localhost
       when: mysql_new_root_pass.changed
 
-    - name: Create my.cnf.d
+    - name: Create my.cnf
       template:
         src: roles/mariadb/templates/my.cnf.j2
         dest: /root/.my.cnf
