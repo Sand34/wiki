@@ -1,6 +1,6 @@
 ---
 - name: installmediawiki
-  hosts: wwiki
+  hosts: wiki
   become: yes
   roles:
     - name: tools
