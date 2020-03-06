@@ -1,7 +1,7 @@
 ---
 
 - name: ping
-  hosts: centos_serv
+  hosts: wwiki
   become: yes
   tasks:
     - name: ping_machine_cible
