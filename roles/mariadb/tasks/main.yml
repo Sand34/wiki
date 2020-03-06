@@ -1,11 +1,7 @@
-    - name: install Mariadb
-      yum:
-        name:
-          - mariadb-server
+    - name: Install Mariadb
+      package:
+        name: "{{ item }}"
         state: present
-
-    - name: remove Mariadb
-      yum:
-        name:
-          - mariadb-server
-        state: absent
+      loop:
+        - mariadb-server
+        - MySQL-python
