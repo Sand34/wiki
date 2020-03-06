@@ -1,6 +1,6 @@
 ---
-- name: ping
+- name: install
   hosts: wwiki
   become: yes
-  tasks:
+  roles:
     - name: Install required tools

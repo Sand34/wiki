@@ -1,4 +1,3 @@
-# TOOLS
     - name: Install required tools
       apt:
         name:
