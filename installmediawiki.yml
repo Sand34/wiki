@@ -4,11 +4,11 @@
   become: yes
   roles:
 
-    - name: arborescence
-    - name: signatures
-    - name: unzip
-    - name: depot_package1
-    - name: selinux
+    #- name: arborescence
+    #- name: signatures
+    #- name: unzip
+    #- name: depot_package1
+    #- name: selinux
     - name: nginx
     - name: php
     - name: mariadb
