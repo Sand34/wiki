@@ -24,7 +24,7 @@
 
 - name: Creer le répertoire images pour le serveur web de la V1.0
   file:
-    path: /appli/projects/wikib/nginx/version1/data/images
+    path: /appli/projects/wikib/nginx/version1/data/
     state: directory
     recurse: yes
 

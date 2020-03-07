@@ -1,7 +1,7 @@
-    - name: stop mariadb
-      service:
-        name: mariadb
-        state: stopped
+    #- name: stop mariadb
+    #  service:
+    #    name: mariadb
+    #    state: stopped
 
     - name: Synchronization origin database config and FS config
       become: yes
