@@ -1,15 +1,21 @@
+    - name: remove mariadb-server
+      yum:
+        name:
+          - mariadb-server
+        state: absent
+
     - name: Install Mariadb
       package:
         name: "{{ item }}"
         state: present
       loop:
         - mariadb-server
-        - MySQL-python
+        #- MySQL-python
 
-    - name: Create mariadb mysql.sock
-      template:
-        src: roles/mariadb/templates/mysql.sock.j2
-        dest: /var/lib/mysql/mysql.sock
+    #- name: Create mariadb mysql.sock
+    #  template:
+    #    src: roles/mariadb/templates/mysql.sock.j2
+    #    dest: /var/lib/mysql/mysql.sock
 
 
     - name: Create mariadb /etc/my.cnf
