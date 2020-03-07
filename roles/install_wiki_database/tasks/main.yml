@@ -4,8 +4,8 @@
     state: present
 
 - name : create mediawiki mariadb user
-  mysql_user: userwikib
-    name: wikib
+  mysql_user:
+    name: userwikib
     host: localhost
     password: password
     priv: wikib.*:ALL
