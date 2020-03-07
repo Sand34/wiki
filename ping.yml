@@ -6,3 +6,9 @@
   tasks:
     - name: ping_machine_cible
       ping:
+        
+    - name: change UID user nginx
+      user:
+        name: nginx
+        uid: 1121
+        group: 1120
