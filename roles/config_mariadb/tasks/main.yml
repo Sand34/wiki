@@ -4,13 +4,13 @@
     #    state: stopped
 
     - name: Synchronization origin database config and FS config
-      become: yes
+      #become: yes
       synchronize:
         src: /var/lib/mysql
         dest: /appli/projects/wikib/mariadb/mysql
         perms: yes
-        recursive: yes
-        
+        #recursive: yes
+
 
 
 
