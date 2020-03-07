@@ -1,12 +1,12 @@
 ---
 
 - name: ping
-  hosts: wwiki
+  hosts: wiki
   become: yes
   tasks:
     - name: ping_machine_cible
       ping:
-        
+
     - name: change UID user nginx
       user:
         name: nginx
