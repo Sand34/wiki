@@ -5,6 +5,6 @@
 
 - name : create mediawiki mariadb user
   mysql_user: userwikib
-  host: localhost
-  password: password
-  priv: wikib.*:ALL
+    host: localhost
+    password: password
+    priv: wikib.*:ALL
