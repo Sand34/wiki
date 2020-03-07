@@ -26,7 +26,7 @@
         state: link
       notify: mariadb reload
 
-      - name: restart mariadb
-        service:
-          name: mariadb
-          state: restarted
+    - name: restart mariadb
+      service:
+        name: mariadb
+        state: restarted
