@@ -11,8 +11,8 @@
     #- name: selinux
     #- name: nginx
     #- name: php
-    - name: tools
-    - name: mariadb
-    - name: install_wiki_database
+    #- name: tools
+    #- name: mariadb
+    #- name: install_wiki_database
     - name: config_mariadb
     #- name: config_nginx
