@@ -1,8 +1,3 @@
-
-
-
-
-
 - name: Create new nginx.conf
   template:
     src: roles/config_nginx/templates/new_nginx.conf.j2
@@ -14,3 +9,10 @@
     src: roles/config_nginx/templates/new_nginx.conf.j2
     dest: /etc/php-fpm.d/www.conf
   notify: restart php-fpm
+
+- name: Create symlink for database old new
+    file:
+    path: /appli/projects/wikib/nginx/version1/wiki_devops
+    dest: /usr/share/nginx/html/wikib
+    state: link
+  notify: nginx reload
