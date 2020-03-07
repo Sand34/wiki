@@ -3,18 +3,19 @@
     #    name: mariadb
     #    state: stopped
 
-    #- name: Synchronization origin database config and FS config
+- name: Synchronization origin database config and FS config
       #become: yes
-    #  synchronize:
-    #    src: /var/lib/mysql
-    #    dest: /appli/projects/wikib/mariadb/mysql
+  synchronize:
+    src: /var/lib/mysql
+    dest: /appli/projects/wikib/mariadb/mysql
     #    perms: yes
         #recursive: yes
-
-- name: Synchronization origin database config and FS config
-  command: rsync -av /var/lib/mysql /appli/projects/wikib/mariadb
   register: result
-  when: result is failed
+
+#- name: Synchronization origin database config and FS config
+#  command: rsync -av /var/lib/mysql /appli/projects/wikib/mariadb
+#  register: result
+#  when: result is failed
 
 
 
