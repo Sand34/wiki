@@ -33,4 +33,4 @@
     path: /appli/projects/wikib/mariadb/mysql
     dest: /var/lib/mysql
     state: link
-    notify: mariadb reload
+    #notify: mariadb reload
