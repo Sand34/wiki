@@ -1,4 +1,4 @@
-_ name: create mediawiki Mariadb database
+- name: create mediawiki Mariadb database
   mysql_db:
     name: wikib
     state: present
