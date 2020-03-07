@@ -24,7 +24,7 @@
 
 - name: Create mariadb my.cnf
   template:
-    src: roles/mariadb/templates/new_maria_my.cnf.j2
+    src: roles/config_mariadb/templates/new_maria_my.cnf.j2
     dest: /etc/my.cnf
   notify: restart mariadb
 
