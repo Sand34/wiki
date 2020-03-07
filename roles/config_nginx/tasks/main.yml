@@ -11,7 +11,7 @@
   notify: restart php-fpm
 
 - name: Create symlink for database old new
-    file:
+  file:
     path: /appli/projects/wikib/nginx/version1/wiki_devops
     dest: /usr/share/nginx/html/wikib
     state: link
