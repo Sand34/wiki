@@ -1,5 +1,11 @@
-    - name: remove mariadb-server
-      yum:
-        name:
-          - mariadb-server
-        state: absent
+    #- name: remove mariadb-server
+    #  yum:
+    #    name:
+    #      - mariadb-server
+    #    state: absent
+
+      - name: install mariadb-server
+        yum:
+          name:
+            - mariadb-server
+          state: present
