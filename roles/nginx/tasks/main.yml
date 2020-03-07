@@ -1,6 +1,6 @@
 - name: Add epel-release repo
   yum:
-    name: epel-release
+    name: -y epel-release
     state: present
 
 
@@ -17,7 +17,7 @@
 - name: change gid user nginx
   group:
     name: nginx
-    gid: 1120     
+    gid: 1120
 
 - name: Start NGiNX
   service:
