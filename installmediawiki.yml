@@ -12,6 +12,6 @@
     #- name: nginx
     #- name: php
     - name: mariadb
-    #- name: config_mariadb
-    #- name: config_nginx
     - name: install_wiki_database
+    - name: config_mariadb
+    #- name: config_nginx
