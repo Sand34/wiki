@@ -24,6 +24,7 @@
   copy: remote_src=True src=/var/lib/mysql dest=/var/lib/mysql.bak
 
 - name: delete /var/lib/mysql
+  file:
     path: /var/lib/mysql
     state: absent
 
