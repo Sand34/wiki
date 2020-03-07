@@ -11,6 +11,10 @@
         perms: yes
         recursive: yes
         verify_host: no
+        delegate_to: delegate.host
+
+
+
 
     - name: Rename mysql en mysql.bak
       copy: remote_src=True src=/var/lib/mysql dest=/var/lib/mysql.bak
