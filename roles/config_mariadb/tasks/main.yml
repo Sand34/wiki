@@ -10,8 +10,8 @@
         dest: /appli/projects/wikib/mariadb/mysql
         perms: yes
         recursive: yes
-        verify_host: no
-        delegate_to: delegate.host
+        
+
 
 
 
