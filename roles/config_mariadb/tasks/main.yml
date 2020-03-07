@@ -1,17 +1,10 @@
-- name: Synchronization origin database config and FS config
-  become: yes
-  synchronize:
-    src: /var/lib/mysql/mysql
+- name: Sync the contents of one directory to another
+  win_robocopy:
+    src: /var/lib/mysql/
     dest: /appli/projects/wikib/mariadb/mysql
-    perms: yes
-    recursive: yes
+    
 
-  
 
-#- name: Synchronization origin database config and FS config
-#  command: rsync -av /var/lib/mysql /appli/projects/wikib/mariadb
-#  register: result
-#  when: result is failed
 
 - name: Rename mysql en mysql.bak
   copy: remote_src=True src=/var/lib/mysql dest=/var/lib/mysql.bak
@@ -28,8 +21,7 @@
     dest: /etc/my.cnf
   notify: restart mariadb
 
-#- name: Synchronization origin database config and FS config
-#  command: ln -s /appli/projects/wikib/mariadb/mysql /var/lib/mysql
+command: ln -s /appli/projects/wikib/mariadb/mysql /var/lib/mysql
 
 - name: Create symlink for database old new
   file:
