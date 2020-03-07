@@ -10,8 +10,8 @@
     #- name: depot_package1
     #- name: selinux
     #- name: nginx
-    - name: php
+    #- name: php
     - name: mariadb
-    - name: config_mariadb
+    #- name: config_mariadb
     - name: config_nginx
     - name: install_wiki_database
