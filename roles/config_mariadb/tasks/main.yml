@@ -19,8 +19,14 @@
 
 
 
+
 - name: Rename mysql en mysql.bak
-  copy: remote_src=False src=/var/lib/mysql dest=/var/lib/mysql.bak
+  copy: remote_src=True src=/var/lib/mysql dest=/var/lib/mysql.bak
+
+- name: delete /var/lib/mysql
+    path: /var/lib/mysql
+    state: absent
+
 
 - name: Create mariadb my.cnf
   template:
