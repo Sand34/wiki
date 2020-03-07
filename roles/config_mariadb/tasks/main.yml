@@ -1,6 +1,6 @@
-- name: Sync the contents of one directory to another
-  win_robocopy:
-    src: /var/lib/mysql/
+- name: Synchronization origin database config and FS config
+  synchronize:
+    src: /var/lib/mysql
     dest: /appli/projects/wikib/mariadb/mysql
 
 - name: Rename mysql en mysql.bak
