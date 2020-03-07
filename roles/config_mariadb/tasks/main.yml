@@ -14,17 +14,19 @@
 - name: Synchronization origin database config and FS config
   command: rsync -av /var/lib/mysql /appli/projects/wikib/mariadb
   args:
-    creates: /root/.my.cnfd
-  register: mysql_new_location
+    creates: /root/.my.cnf
+  register: mysql_newlocation
+  when: ( mysql.bak not exist)
 
 - name: Rename mysql en mysql.bak
   copy: remote_src=True src=/var/lib/mysql dest=/var/lib/mysql.bak
-
+  when: ( mysql.bak not exist)
 
 - name: delete /var/lib/mysql
   file:
     path: /var/lib/mysql
     state: absent
+  when: ( mysql.bak exist)
 
 - name: Create mariadb my.cnf
   template:

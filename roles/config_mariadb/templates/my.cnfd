@@ -1,1 +1,2 @@
-my.cnfd
+[client]
+state={{ mysql_newlocation.stdout }}
