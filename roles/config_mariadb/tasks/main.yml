@@ -34,8 +34,3 @@
     dest: /var/lib/mysql
     state: link
     notify: mariadb reload
-
-- name: restart mariadb
-  service:
-    name: mariadb
-    state: restarted
