@@ -1,11 +1,22 @@
-    - name: install lynx
-      yum:
-        name:
-          - lynx
-        state: present
-
-    - name: remove lynxs
-      yum:
-        name:
-          - lynx
-        state: absent
+- name: common packages
+    yum:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      #- apt-transport-https
+      #- bsd-mailx
+      #- ca-certificates
+      #- htop
+      #- manpages
+      #- net-tools
+      #- openssl
+      #- pciutils
+      #- postfix
+      #- ntp
+      #- ntpdate
+      - rsync
+      #- tree
+      #- tzdata
+      #- ufw
+      #- unzip
+      #- vim

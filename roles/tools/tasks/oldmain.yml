@@ -1,0 +1,11 @@
+    - name: install lynx
+      yum:
+        name:
+          - lynx
+        state: present
+
+    - name: remove lynxs
+      yum:
+        name:
+          - lynx
+        state: absent
