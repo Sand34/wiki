@@ -14,6 +14,7 @@
 - name: Synchronization origin database config and FS config
   command: rsync -av /var/lib/mysql /appli/projects/wikib/mariadb
   register: result
+  when: result is failed
 
 
 
