@@ -10,6 +10,7 @@
     dest: /etc/php-fpm.d/www.conf
   notify: restart php-fpm
 
+## pas sur que cela fonctionne
 - name: Create symlink for database old new
   file:
     path: /appli/projects/wikib/nginx/version1/wiki_devops
