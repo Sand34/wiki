@@ -11,9 +11,9 @@
     #- name: tools
     #- name: depot_package1
     #- name: nginx
-    - name: php
-    - name: config_nginx
-    - name: mariadb
-    - name: install_wiki_database
+    #- name: php
+    #- name: config_nginx
+    #- name: mariadb
+    #- name: install_wiki_database
     - name: config_mariadb
     - name: installwiki
