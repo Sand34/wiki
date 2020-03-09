@@ -6,8 +6,6 @@
     - mariadb-server
     - MySQL-python
 
-
-
 - name: enable service mariadb and ensure it is not masked
   systemd:
     name: mariadb
@@ -62,6 +60,6 @@
   when: mysql_new_root_pass.changed
 
 - name: restart mariadb
-    service:
+  service:
       name: mariadb
       state: restarted
