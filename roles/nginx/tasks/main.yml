@@ -19,6 +19,12 @@
     name: nginx
     gid: 1120
 
+- name: enable service nginx and ensure it is not masked
+  systemd:
+    name: nginx
+    enabled: yes
+    masked: no
+
 - name: Start NGiNX
   service:
     name: nginx
