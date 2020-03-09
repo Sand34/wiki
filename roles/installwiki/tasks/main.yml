@@ -38,7 +38,10 @@
     src: roles/installwiki/templates/new_LocalSettings.j2
     dest: /appli/projects/wikib/nginx/version1/wiki_devops/LocalSettings.php
 
-
+- name: start mariadb
+  service:
+    name: mariadb
+    state: started
 #- name: supprimer l'ancien LocalSettings
 #  file:
 #    path: /appli/projects/wikib/nginx/version1/wiki_devops/LocalSettings
