@@ -10,7 +10,7 @@
 
 # import des donnés
 
-  - name: copier Donnees.xml
+- name: copier Donnees.xml
   copy:
     src: files/Donnees.xml
     dest: /appli/projects/wikib/nginx/version1/wiki_devops/
