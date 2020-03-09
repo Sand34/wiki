@@ -58,8 +58,3 @@
     src: roles/mariadb/templates/my.cnf.j2
     dest: /root/.my.cnf
   when: mysql_new_root_pass.changed
-
-- name: restart mariadb
-  service:
-      name: mariadb
-      state: restarted
