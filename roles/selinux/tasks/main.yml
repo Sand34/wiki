@@ -3,3 +3,6 @@
     path: /etc/selinux/config
     regexp: '^SELINUX='
     line: SELINUX=disabled
+
+- name: Unconditionally reboot the machine with all defaults
+  reboot:

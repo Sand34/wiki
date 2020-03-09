@@ -3,22 +3,8 @@
     name: "{{ item }}"
     state: present
   with_items:
-      #- apt-transport-https
-      #- bsd-mailx
-      #- ca-certificates
-      #- htop
-      #- manpages
-      #- net-tools
-      #- openssl
-      #- pciutils
-      #- postfix
-      #- ntp
-      #- ntpdate
+      - unzip
       - rsync
-      #- tree
-      #- tzdata
-      #- ufw
-      #- unzip
-      #- vim
-
-          
+      - firewalld
+      - vim
+      - psmisc

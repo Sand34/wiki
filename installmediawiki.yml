@@ -6,13 +6,37 @@
 
     - name: arborescence
     - name: signatures
-    - name: unzip
+    - name: selinux_
+     - name: firewall
+    - name: tools
     - name: depot_package1
-    - name: selinux
     - name: nginx
     - name: php
-    - name: tools
     - name: mariadb
     - name: install_wiki_database
     #- name: config_mariadb
     - name: config_nginx
+
+
+
+
+
+
+
+
+     - name: reboot
+     - name: mariadb
+     - name: reboot
+  #- name: SiPbNginx
+     - name: fullrestart
+     - name: installwiki
+     - name: reboot
+  #- name: SiPbNginx
+     - name: fullrestart
+     - name: importDonnees
+     - name: rebuildchanges
+     - name: importImages
+     - name: cookiesLocalSettings
+     - name: reboot
+  #- name: SiPbNginx
+     - name: fullrestart
