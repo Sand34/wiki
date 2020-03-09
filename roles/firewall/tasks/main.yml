@@ -10,5 +10,5 @@
     permanent: yes
     state: enabled
 
-- name: Reboot du firewall
+- name: reload du firewall
   command: firewall-cmd --reload
