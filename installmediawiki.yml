@@ -10,7 +10,7 @@
     #- name: firewall
     #- name: tools
     #- name: depot_package1
-    - name: nginx
+    #- name: nginx
     #- name: config_nginx
     #- name: php
     - name: mariadb
