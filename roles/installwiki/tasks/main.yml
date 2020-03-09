@@ -53,19 +53,12 @@
     src: roles/installwiki/templates/new_LocalSettings.j2
     dest: /appli/projects/wikib/nginx/version1/wiki_devops/LocalSettings.php
 
+- name: Modifiy php.ini
+  template:
+    src: roles/installwiki/templates/php.ini.j2
+    dest: /etc/php.ini
+
 - name: start mariadb
   service:
     name: mariadb
     state: started
-
-
-#- name: supprimer l'ancien LocalSettings
-#  file:
-#    path: /appli/projects/wikib/nginx/version1/wiki_devops/LocalSettings
-#    state: absent
-
-#- name: remplacer le LocalSettings
-#  template:
-#    src: roles/cookiesLocalSettings/templates/LocalSettings.php.j2
-#    dest: /appli/projects/wikib/nginx/version1/wiki_devops/LocalSettings
-#    force: yes
