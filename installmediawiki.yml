@@ -11,9 +11,10 @@
     - name: tools
     - name: depot_package1
     - name: nginx
+    - name: config_nginx
     - name: php
     - name: mariadb
     - name: install_wiki_database
     - name: config_mariadb
-    - name: config_nginx
+
     - name: installwiki
