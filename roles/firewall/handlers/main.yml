@@ -1,0 +1,7 @@
+- name: restart firewall
+  service:
+    name: firewall
+    state: restarted
+
+- name: Synchronization database dans le FS
+  command: reload
