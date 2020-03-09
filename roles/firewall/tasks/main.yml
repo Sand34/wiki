@@ -9,3 +9,6 @@
     zone: public
     permanent: yes
     state: enabled
+
+- name: reload firewalld
+  command: reload

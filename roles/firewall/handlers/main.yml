@@ -3,5 +3,5 @@
     name: firewall
     state: restarted
 
-- name: Synchronization database dans le FS
+- name: reload firewalld
   command: reload

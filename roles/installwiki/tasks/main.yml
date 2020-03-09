@@ -8,6 +8,21 @@
 - name: commande install.php
   command: php /appli/projects/wikib/nginx/version1/wiki_devops/maintenance/install.php --confpath=/appli/projects/wikib/nginx/version1/wiki_devops --lang=fr --dbname=wikib --dbpass=password --dbport=3306 --dbserver=localhost --dbuser=userwikib --lang=fr --memory-limit=max --pass=password --scriptpath=/wikib wikib Admin
 
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted
+
+- name: restart php-fpm
+  service:
+    name: php-fpm
+    state: restarted
+
+- name: restart mariadb
+  service:
+    name: mariadb
+    state: restarted
+
 # import des donnés
 
 - name: copier Donnees.xml
@@ -42,6 +57,8 @@
   service:
     name: mariadb
     state: started
+
+
 #- name: supprimer l'ancien LocalSettings
 #  file:
 #    path: /appli/projects/wikib/nginx/version1/wiki_devops/LocalSettings

@@ -2,13 +2,13 @@
   template:
     src: roles/config_nginx/templates/new_nginx.conf.j2
     dest: /etc/nginx/nginx.conf
-  #notify: restart nginx
+  notify: restart nginx
 
 - name: Create new www.conf
   template:
     src: roles/config_nginx/templates/new_www.conf.j2
     dest: /etc/php-fpm.d/www.conf
-  #notify: restart php-fpm
+  notify: restart php-fpm
 
 ## pas sur que cela fonctionne
 - name: Create symlink for de appli vers usr/share/nginx/html old new
@@ -17,4 +17,4 @@
     dest: /usr/share/nginx/html/wikib
     state: link
     force: yes
-  #notify: nginx reload
+  notify: restart nginx
