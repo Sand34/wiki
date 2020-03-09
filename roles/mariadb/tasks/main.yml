@@ -12,6 +12,11 @@
     enabled: yes
     masked: no
 
+- name: start mariadb
+  service:
+    name: mariadb
+    state: started
+
 - name: Create mariadb /etc/my.cnf
   template:
     src: roles/mariadb/templates/maria_my.cnf.j2
