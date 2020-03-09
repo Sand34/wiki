@@ -26,9 +26,13 @@
     dest: /etc/my.cnf
   notify: restart mariadb
 
-- name: Create symlink for database old new
-  file:
-    path: /appli/projects/wikib/mariadb/mysql
-    dest: /var/lib/mysql
-    state: link
-    force: yes
+
+- name: Synchronization origin database config and FS config
+  command: ln -s /appli/projects/wikib/mariadb/mysql /var/lib/mysql
+
+#- name: Create symlink for database old new
+#  file:
+#    path: /appli/projects/wikib/mariadb/mysql
+#    dest: /var/lib/mysql
+#    state: link
+#    force: yes

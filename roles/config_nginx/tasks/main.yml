@@ -10,14 +10,18 @@
     dest: /etc/php-fpm.d/www.conf
   notify: restart php-fpm
 
-## pas sur que cela fonctionne
+
 - name: Create symlink for de appli vers usr/share/nginx/html old new
-  file:
-    path: /appli/projects/wikib/nginx/version1/wiki_devops
-    dest: /usr/share/nginx/html/wikib
-    state: link
-    force: yes
-  notify: restart nginx
+  command: ln -s /appli/projects/wikib/nginx/version1/wiki_devops /usr/share/nginx/html/wikib
+
+## pas sur que cela fonctionne
+#- name: Create symlink for de appli vers usr/share/nginx/html old new
+#  file:
+#    path: /appli/projects/wikib/nginx/version1/wiki_devops
+#    dest: /usr/share/nginx/html/wikib
+#    state: link
+#    force: yes
+#  notify: restart nginx
 
 - name: Unconditionally reboot the machine with all defaults
   reboot:
