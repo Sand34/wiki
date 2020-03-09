@@ -9,4 +9,6 @@
     zone: public
     permanent: yes
     state: enabled
-    notify: restart firewalld
+
+- name: Reboot du firewall
+  command: firewall-cmd --reload
