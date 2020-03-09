@@ -9,4 +9,4 @@
     zone: public
     permanent: yes
     state: enabled
-    notify: restart mariadb
+    notify: restart firewalld

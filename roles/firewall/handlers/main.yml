@@ -1,4 +1,4 @@
-- name: restart firewall
+- name: restart firewalld
   service:
-    name: firewall
+    name: firewalld
     state: restarted
