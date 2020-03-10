@@ -51,6 +51,11 @@
     src: roles/installwiki/templates/php.ini.j2
     dest: /etc/php.ini
 
+- name: restart php-fpm
+  service:
+    name: php-fpm
+    state: restarted    
+
 - name: start mariadb
   service:
     name: mariadb
