@@ -1,2 +1,2 @@
 - name: php7.4
-  command: yum install php74
+  command: yum install php7.4
