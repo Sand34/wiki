@@ -1,8 +1,2 @@
-- name: Install php
-  package:
-    name: "{{ item }}"
-    state: present
-    update_cache: yes
-  loop:
-    - php7.4
-    - php-mcrypt
+- name: php7.4
+  command: yum install php74
