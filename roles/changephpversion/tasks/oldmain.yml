@@ -1,0 +1,49 @@
+- name: remove php-xcache
+  yum:
+    name: php-xcache
+    state: absent
+
+- name: Add repository
+  yum_repository:
+    name: epel
+    description: EPEL
+    file: external_repos
+    baseurl: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    state: present
+- name: Add repository
+  yum_repository:
+    name: epel
+    description: EPEL
+    file: external_repos
+    baseurl: http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+    state: present
+
+
+- name: activation rmp
+  command: rpm -Uvh remi-release-7.rpm epel-release-latest-7.noarch.rpm
+
+- name: activation du dépôt
+  command: yum-config-manager --enable remi-php74
+
+- name: Install php
+  package:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  loop:
+    - php
+    - php-mcrypt
+    #- php-cli
+    #- php-gd
+    #- php-curl#
+    #- php-mysql
+    #- php-lda#p
+    #- php-zi#p
+    #- php-fi#leinfo
+    #- php-xml
+    #- php-fpm
+    #- php-mbstring
+    #- php-json
+    #- php-mcrypt
+    #- php-soap
+    #- php-xmlrpc
