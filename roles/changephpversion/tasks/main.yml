@@ -4,5 +4,5 @@
     state: present
     update_cache: yes
   loop:
-    - php74
+    - php7.4
     - php-mcrypt
