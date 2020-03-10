@@ -4,7 +4,6 @@
     name: epel-release
     state: present
 
-
 - name: Install nginx
   yum:
     name: nginx
