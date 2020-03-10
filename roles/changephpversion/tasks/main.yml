@@ -11,10 +11,11 @@
     baseurl: http://rpms.remirepo.net/enterprise/remi-release-7.rpm
     state: present
 
-- name: php
-  package::
+- name: Install php
+  package:
     name: "{{ item }}"
     state: present
+    update_cache: yes
   loop:
     - php
     - php-xml
@@ -33,4 +34,3 @@
     - php-mysql
     - php74-php-intl
     - php-fpm
-  ignore_errors: true
