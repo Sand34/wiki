@@ -11,7 +11,8 @@
     baseurl: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
     state: present
 
-
+- name: update
+  command: yum update_cache
 
 
 #- name: activation rmp
@@ -28,16 +29,16 @@
   loop:
     - php
     - php-mcrypt
-    - php-cli
-    - php-gd
-    - php-curl
-    - php-mysql
-    - php-ldap
-    - php-zip
-    - php-fileinfo
-    - php-xml
-    - php-fpm
-    - php-mbstring
+    #- php-cli
+    #- php-gd
+    #- php-curl#
+    #- php-mysql
+    #- php-lda#p
+    #- php-zi#p
+    #- php-fi#leinfo
+    #- php-xml
+    #- php-fpm
+    #- php-mbstring
     #- php-json
     #- php-mcrypt
     #- php-soap
