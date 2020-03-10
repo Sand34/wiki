@@ -7,6 +7,7 @@
   yum_repository:
     name: epel
     description: EPEL YUM repo remirepo
+    file: external_repos
     baseurl: http://rpms.remirepo.net/enterprise/remi-release-7.rpm
     state: present
 
