@@ -1,3 +1,8 @@
+- name: Remove httpd
+  yum:
+    name: httpd
+    state: absent
+
 - name: common packages
   yum:
     name: "{{ item }}"
