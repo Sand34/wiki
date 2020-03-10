@@ -10,7 +10,7 @@
     baseurl: http://rpms.remirepo.net/enterprise/remi-release-7.rpm
     state: present
 
-- name: php74
+- name: php
   package::
     name: "{{ item }}"
     state: present
