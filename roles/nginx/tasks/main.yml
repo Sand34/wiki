@@ -24,8 +24,3 @@
     name: nginx
     enabled: yes
     masked: no
-
-#- name: Start NGiNX
-# # service:
-#    name: nginx
-#    state: started
