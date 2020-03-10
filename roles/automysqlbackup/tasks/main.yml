@@ -17,7 +17,6 @@
 - name: commande install.sh
   command: /opt/automysqlbackup/./install.sh
 
-
 - name: définir permissions
   file:
     path: /opt/automysqlbackup

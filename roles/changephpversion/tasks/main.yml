@@ -18,19 +18,18 @@
     update_cache: yes
   loop:
     - php
-    - php-xml
     - php-mcrypt
     - php-cli
-    - php-curl
-    - php-ldap
-    - php-soap
-    - php-xmlrpc
-    - php-mbstring
-    - php-json
     - php-gd
+    - php-curl
+    - php-mysql
+    - php-ldap
     - php-zip
     - php-fileinfo
-    - php-mcrypt
-    - php-mysql
-    - php74-php-intl
+    - php-xml
     - php-fpm
+    - php-mbstring
+    #- php-json
+    #- php-mcrypt
+    #- php-soap
+    #- php-xmlrpc
